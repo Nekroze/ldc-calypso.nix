@@ -1,5 +1,6 @@
 # ldc-calypso.nix
-[Nix][1] package for [LDC][2] [Syniurge/Calypso][3] fork
+
+[Nix][1] package for [LDC][2] [Syniurge/Calypso][3] fork which allows direct import of C++ code from [dlang][4].
 
 ## Usage
 
@@ -41,3 +42,4 @@ in stdenv.mkDerivation rec {
 [1]: https://www.nixos.org/nix/
 [2]: https://github.com/ldc-developers
 [3]: https://github.com/Syniurge/Calypso
+[4]: https://dlang.org/
