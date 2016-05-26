@@ -15,8 +15,8 @@ $ ./result/bin/ldc2 --help
 
 ### As a nix dependency
 
-```
-default.nix
+```shell
+$ cat default.nix
 ```
 ```nix
 { nixpkgs ? import <nixpkgs> {} }:
