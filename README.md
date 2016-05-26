@@ -1,5 +1,5 @@
 # ldc-calypso.nix
-Nix package for ldc Syniurge/Calypso fork
+[Nix][1] package for [LDC][2] [Syniurge/Calypso][3] fork
 
 ## Usage
 
@@ -39,3 +39,5 @@ in stdenv.mkDerivation rec {
 }
 ```
 [1]: https://www.nixos.org/nix/
+[2]: https://github.com/ldc-developers
+[3]: https://github.com/Syniurge/Calypso
