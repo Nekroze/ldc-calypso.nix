@@ -1,0 +1,46 @@
+diff --git a/dmd2/root/port.c b/dmd2/root/port.c
+index 2435400..ed65fa5 100644
+--- a/dmd2/root/port.c
++++ b/dmd2/root/port.c
+@@ -770,7 +770,7 @@ int Port::isNan(double r)
+     return isnan(r);
+ #else
+     #undef isnan
+-    return ::isnan(r);
++    return std::isnan(r);
+ #endif
+ }
+ 
+@@ -786,7 +786,7 @@ int Port::isNan(longdouble r)
+     return isnan(r);
+ #else
+     #undef isnan
+-    return ::isnan(r);
++    return std::isnan(r);
+ #endif
+ }
+ 
+@@ -814,13 +814,13 @@ int Port::isInfinity(double r)
+     return isinf(r);
+ #else
+     #undef isinf
+-    return ::isinf(r);
++    return std::isinf(r);
+ #endif
+ }
+ 
+ longdouble Port::sqrt(longdouble x)
+ {
+-    return ::sqrtl(x);
++    return std::sqrt(x);
+ }
+ 
+ longdouble Port::fmodl(longdouble x, longdouble y)
+@@ -828,7 +828,7 @@ longdouble Port::fmodl(longdouble x, longdouble y)
+ #if __FreeBSD__ && __FreeBSD_version < 800000 || __OpenBSD__ || __NetBSD__ || __DragonFly__
+     return ::fmod(x, y);        // hack for now, fix later
+ #else
+-    return ::fmodl(x, y);
++    return std::fmod(x, y);
+ #endif
+ }
