@@ -38,3 +38,4 @@ in stdenv.mkDerivation rec {
   '';
 }
 ```
+[1]: https://www.nixos.org/nix/
