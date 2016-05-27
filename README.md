@@ -1,5 +1,6 @@
 # ldc-calypso.nix
-Nix package for ldc Syniurge/Calypso fork
+
+[Nix][1] package for [LDC][2] [Syniurge/Calypso][3] fork which allows direct import of C++ code from [dlang][4].
 
 ## Usage
 
@@ -8,7 +9,7 @@ This requires the [Nix][1] package manager for reproducable builds.
 ### Building ldc on its own
 
 ```shell
-$ git clone https://github.com/Nekroze/ldc-calypso.nix
+$ git clone https://github.com/Nekroze/ldc-calypso.nix.git
 $ nix-build ldc-calypso.nix
 $ ./result/bin/ldc2 --help
 ```
@@ -38,3 +39,7 @@ in stdenv.mkDerivation rec {
   '';
 }
 ```
+[1]: https://www.nixos.org/nix/
+[2]: https://github.com/ldc-developers
+[3]: https://github.com/Syniurge/Calypso
+[4]: https://dlang.org/
