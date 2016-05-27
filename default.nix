@@ -23,4 +23,8 @@ stdenv.mkDerivation rec {
   patches = [
     ./math.patch
   ];
+
+  postPatch = ''
+    sed -i 's|set(dc_flags --output-o)|set(dc_flags --output-o -cpp-args -I${stdenv.cc.cc}/include/c++/5.3.0)|g' runtime/CMakeLists.txt
+  '';
 }
