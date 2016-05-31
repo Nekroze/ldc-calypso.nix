@@ -18,13 +18,14 @@ stdenv.mkDerivation rec {
   enableParallelBuilding = true;
   cmakeFlags = [
     "-DBUILD_SHARED_LIBS=ON"
+    ''-DD_CFLAGS="-cpp-args -I${stdenv.cc.cc}/include"''
   ];
 
   patches = [
     ./math.patch
   ];
 
-  postPatch = ''
-    sed -i 's|set(dc_flags --output-o)|set(dc_flags --output-o -cpp-args -I${stdenv.cc.cc}/include/c++/5.3.0)|g' runtime/CMakeLists.txt
-  '';
+  #postPatch = ''
+  #  sed -i 's|set(dc_flags --output-o)|set(dc_flags --output-o -cpp-args -I${stdenv.cc.cc}/include/c++/5.3.0)|g' runtime/CMakeLists.txt
+  #'';
 }
