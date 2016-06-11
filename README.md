@@ -10,7 +10,8 @@ This requires the [Nix][1] package manager for reproducable builds.
 
 ```shell
 $ git clone https://github.com/Nekroze/ldc-calypso.nix.git
-$ nix-build ldc-calypso.nix
+$ cd ldc-calypso.nix
+$ nix-build
 $ ./result/bin/ldc2 --help
 ```
 
